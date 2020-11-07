@@ -1,4 +1,4 @@
-const db = require('../models/workout');
+const db = require('../models');
 
 module.exports = function (app) {
   // getLastWorkout
@@ -7,7 +7,7 @@ module.exports = function (app) {
       .then((workout) => {
         res.json(workout);
       })
-      .cath((err) => {
+      .catch((err) => {
         res.json(err);
       });
   });
