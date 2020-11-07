@@ -15,7 +15,7 @@ app.use(express.static('public'));
 require('./routes/htmlRoutes')(app);
 require('./routes/apiRoutes')(app);
 // setting up DB connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/workout', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/ninaDB', {
   useNewUrlParser: true,
   useFindAndModify: false,
   useCreateIndex: true,
